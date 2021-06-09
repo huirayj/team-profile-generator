@@ -40,7 +40,7 @@ const questionsNG = [
     {
         type: 'input',
         message: "Enter your engineer's GitHub username: ",
-        name: 'username',
+        name: 'github',
     }
 ];
 
@@ -70,7 +70,7 @@ const questionsIT = [
 const questionAdd = [
     {
         type: 'list',
-        message: "Would you like like to do next? ",
+        message: "What would you like to do next? ",
         name: 'add',
         choices: ['Add an engineer', 'Add an intern', 'Create the cards']
     }
