@@ -1,22 +1,22 @@
 const questionsTM = [
     {
         type: 'input',
-        message: "Enter your team manager's name: ",
+        message: "Enter your name: ",
         name: 'name',
     },
     {
         type: 'input',
-        message: "Enter your team manager's employee ID: ",
+        message: "Enter your employee ID: ",
         name: 'id',
     },
     {
         type: 'input',
-        message: "Enter your team manager's E-mail: ",
+        message: "Enter your E-mail: ",
         name: 'email',
     },
     {
         type: 'input',
-        message: "Enter your team manager's office number: ",
+        message: "Enter your office number: ",
         name: 'office',
     }
 ];
@@ -63,16 +63,16 @@ const questionsIT = [
     {
         type: 'input',
         message: "Enter your intern's school name: ",
-        name: 'username',
+        name: 'school',
     }
 ];
 
 const questionAdd = [
     {
         type: 'list',
-        message: "Would you like add an another team member: ",
+        message: "Would you like like to do next? ",
         name: 'add',
-        choices: ['Add an engineer', 'Add an intern', 'Done']
+        choices: ['Add an engineer', 'Add an intern', 'Create the cards']
     }
 ];
 
@@ -80,5 +80,5 @@ module.exports = {
     questionsTM,
     questionsNG,
     questionsIT,
-    questionExtra
+    questionAdd
 };
