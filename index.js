@@ -9,11 +9,6 @@ const Intern = require('./lib/classes/intern');
 const question = require('./lib/questions');
 const render = require("./lib/htmlRenderer");
 
-
-// const inquireTM = inquirer.prompt(question.questionsTM);
-// const inquireNG = inquirer.prompt(question.questionsNG);
-// const inquireIT = inquirer.prompt(question.questionsIT);
-// const inquireAdd = inquirer.prompt(question.questionAdd);
 const employees = [];
 
 const init = () => addManager();
