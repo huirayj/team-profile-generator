@@ -1,13 +1,13 @@
-<div>
-    <div>
-        <h2>{{ name }}</h2>
-        <h3>{{ role }}</h3>
+<div class="card m-2">
+    <div class="media-content has-background-success-dark p-3">
+        <h2 class="title is-4 has-text-white">{{ name }}</h2>
+        <h3 class="subtitle is-6 has-text-white"><i class="far fa-clipboard mr-2"></i>{{ role }}</h3>
     </div>
-    <div>
+    <div class="p-3">
         <ul>
-            <li>ID: {{ id }}</li>
-            <li>Email: <a href="mailto:{{ email }}">{{ email }}</a></li>
-            <li>Office number: {{ officeNumber }}</li>
+            <li class="p-2">ID: {{ id }}</li>
+            <li class="p-2">Email: <a href="mailto:{{ email }}">{{ email }}</a></li>
+            <li class="p-2">Office number: {{ officeNumber }}</li>
         </ul>
     </div>
 </div>
