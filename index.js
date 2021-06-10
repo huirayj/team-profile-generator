@@ -16,6 +16,8 @@ const render = require("./lib/htmlRenderer");
 // const inquireAdd = inquirer.prompt(question.questionAdd);
 const employees = [];
 
+const init = () => addManager();
+
 const addManager = () => {
     inquirer.prompt(question.questionsTM)
         .then(({ name, id, email, office }) => {
@@ -73,4 +75,4 @@ const generateHTML = () => {
         console.error(err ? err : 'Your html was successfully created.'));
 };
 
-addManager();
+init();
