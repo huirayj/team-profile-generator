@@ -9,16 +9,26 @@ const Intern = require('./lib/classes/intern');
 const question = require('./lib/questions');
 const render = require("./lib/htmlRenderer");
 
-const employees = [];
+const teams = {};
 
-const init = () => addManager();
+const init = () => {
+    createTeam();
+}
+
+const createTeam = () => {
+    inquirer.prompt(question.questionTeam)
+        .then((answer) => {
+            teams[`${answer.teamName}`] = [];
+            addManager();
+        });
+};
 
 const addManager = () => {
     inquirer.prompt(question.questionsTM)
         .then(({ name, id, email, office }) => {
             const manager = new Manager(name, id, email, office);
 
-            employees.push(manager);
+            teams[Object.keys(teams)].push(manager);
             addMember();
         });
 }
@@ -28,7 +38,7 @@ const addEngineer = () => {
         .then(({ name, id, email, github }) => {
             const engineer = new Engineer(name, id, email, github);
 
-            employees.push(engineer);
+            teams[Object.keys(teams)].push(engineer);
             addMember();
         });
 }
@@ -38,7 +48,7 @@ const addIntern = () => {
         .then(({ name, id, email, school }) => {
             const intern = new Intern(name, id, email, school);
 
-            employees.push(intern);
+            teams[Object.keys(teams)].push(intern);
             addMember();
         });
 }
@@ -62,12 +72,12 @@ const addMember = () => {
 
 const generateHTML = () => {
     const OUTPUT_DIR = path.resolve(__dirname, "dist");
-    const outputPath = path.join(OUTPUT_DIR, "team.html");
+    const outputPath = path.join(OUTPUT_DIR, `${Object.keys(teams)}.html`);
 
-    // (!fs.existsSync(OUTPUT_DIR)) && fs.mkdirSync(OUTPUT_DIR)
-
-    fs.writeFileSync(outputPath, render(employees), (err) =>
+    fs.writeFileSync(outputPath, render(teams[Object.keys(teams)]), (err) =>
         console.error(err ? err : 'Your html was successfully created.'));
 };
 
 init();
+
+module.exports = teams;
