@@ -5,7 +5,7 @@ In this exercise, the user creates a set of tests for several classes and cards 
 
 ## Pseudocode
 1. Write tests for each class. 
-2. Create classes and run said tests.
+2. Create classes for each role and run said tests.
 3. Create a prompt that takes in user input.
 4. Allow the user the option to add more team members or exit the prompt and generate the HTML document.
 5. Create an array for the team members to be used as an argument in the given script 'htmlRenderer.js'
