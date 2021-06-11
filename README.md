@@ -36,7 +36,6 @@ In this exercise, the user creates a set of tests for several classes and cards 
 
 ## Screenshots
 ### Desktop
-![Team Profile Generator Desktop](./assets/demo/team-profile-generator-demo.gif)
-
+![Team Profile Generator Desktop](./assets/screenshots/team-profile-generator-desktop.png)
 ### Mobile
-![Team Profile Generator Desktop](./assets/demo/team-profile-generator-demo.gif)
+![Team Profile Generator Desktop](./assets/screenshots/team-profile-generator-mobile.png)
