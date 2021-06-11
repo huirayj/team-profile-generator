@@ -70,8 +70,9 @@ const addMember = () => {
 }
 
 const generateHTML = () => {
+    const filename = Object.keys(teams).toString().replace(/\s+/g, '').toLowerCase();
     const OUTPUT_DIR = path.resolve(__dirname, "dist");
-    const outputPath = path.join(OUTPUT_DIR, `${Object.keys(teams)}.html`);
+    const outputPath = path.join(OUTPUT_DIR, `${filename}.html`);
 
     fs.writeFileSync(outputPath, render(teams[Object.keys(teams)]), (err) =>
         console.error(err ? err : 'Your html was successfully created.'));
