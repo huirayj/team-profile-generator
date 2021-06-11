@@ -8,8 +8,7 @@ const Intern = require('./lib/classes/intern');
 
 const question = require('./lib/questions');
 const render = require("./lib/htmlRenderer");
-
-const teams = {};
+const teams = require('./lib/teams');
 
 const init = () => {
     createTeam();
@@ -81,3 +80,4 @@ const generateHTML = () => {
 init();
 
 module.exports = teams;
+
