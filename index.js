@@ -82,8 +82,10 @@ const generateHTML = () => {
     const outputPath = path.join(OUTPUT_DIR, `${filename}.html`);
 
     // takes the employee array and processes it as an html document
-    fs.writeFileSync(outputPath, render(teams[Object.keys(teams)]), (err) =>
-        console.error(err ? err : 'Your html was successfully created.'));
+    fs.writeFile(outputPath, render(teams[Object.keys(teams)]), err => {
+        if (err) throw err;
+        console.log('Your html was successfully created.');
+    });
 };
 
 init();
