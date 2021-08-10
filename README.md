@@ -6,7 +6,6 @@ In this exercise, the user creates a set of tests for several classes and cards 
 
 ## Table of Contents
 
-  - [Table of Contents](#table-of-contents)
   - [Pseudocode](#pseudocode)
   - [Installation](#installation)
   - [Usage](#usage)
