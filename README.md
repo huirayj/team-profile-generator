@@ -35,6 +35,8 @@ In this exercise, the user creates a set of tests for several classes and cards 
 
 - `npm test` to run tests.
 - `node index.js` to run the app.
+- Enter the information when prompted.
+- Each team can have one manager and multiple engineers and interns.
 
 ## Technologies Used
 
